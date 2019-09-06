@@ -5,6 +5,7 @@ Task is solved
 JavaRush subscribe for month
 Push in New-pull
 Warnning
+Changes in GitHub New-pull branch
 */
 
 import java.io.BufferedReader;
