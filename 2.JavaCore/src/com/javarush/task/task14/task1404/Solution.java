@@ -16,14 +16,14 @@ public class Solution {
         Reader inputStreamReader = new InputStreamReader(inputStream);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 
-//        String name = bufferedReader.readLine(); //читаем строку с клавиатуры
-//        String sAge = bufferedReader.readLine(); //читаем строку с клавиатуры
-//        int nAge = Integer.parseInt(sAge);
+        String catName;
+        CatFactory newCat = new CatFactory();
 
         do {
-            String name = bufferedReader.readLine();
-            if (!name.equals("")) {
-                System.out.println("It's not Enter");
+            catName = bufferedReader.readLine();
+            if (!catName.equals("")) {
+                newCat.getCatByKey(catName).toString();
+                System.out.println(newCat.getCatByKey(catName).toString());
             }
             else
                 break;
