@@ -1,7 +1,8 @@
 package com.javarush.task.task14.task1404;
 
 /* 
-Коты
+Task is solved
+JavaRush subscribe for month
 */
 
 import java.io.BufferedReader;
