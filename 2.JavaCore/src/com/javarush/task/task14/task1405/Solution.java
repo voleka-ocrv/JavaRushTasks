@@ -10,9 +10,6 @@ public class Solution {
         Selectable selectable = new Food();
         Food newFood = (Food) selectable;
 
-//        newFood.onEat();
-//        newFood.onSelect();
-
         foodMethods(food);
         selectableMethods(selectable);
     }
