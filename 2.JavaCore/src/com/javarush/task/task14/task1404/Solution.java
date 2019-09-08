@@ -3,6 +3,7 @@ package com.javarush.task.task14.task1404;
 /* 
 Task is solved
 JavaRush subscribe for month
+new clone ropository
 */
 
 import java.io.BufferedReader;
