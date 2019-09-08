@@ -1,7 +1,7 @@
 package com.javarush.task.task14.task1404;
 
 /* 
-Changed from Intelij IDEA
+Changed from Intelij IDEA (Laptop from GitHub)
 */
 
 import java.io.BufferedReader;
