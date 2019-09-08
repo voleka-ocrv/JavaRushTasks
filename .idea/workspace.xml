@@ -6,8 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a9c2848-0864-419d-ba1c-a0669c6ee00f" name="Default" comment="1318">
-      <change beforePath="$PROJECT_DIR$/2.JavaCore/src/com/javarush/task/task14/task1404/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.JavaCore/src/com/javarush/task/task14/task1404/Solution.java" afterDir="false" />
+    <list default="true" id="8a9c2848-0864-419d-ba1c-a0669c6ee00f" name="Default" comment="new clone">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="JavaRushTasks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/2.JavaCore/src/com/javarush/task/task14/task1404/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -728,7 +728,28 @@
       <option name="project" value="LOCAL" />
       <updated>1567667691444</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1318">
+      <created>1567941941355</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1567941941355</updated>
+    </task>
+    <task id="LOCAL-00005" summary="new clone">
+      <created>1567942088391</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1567942088391</updated>
+    </task>
+    <task id="LOCAL-00006" summary="new clone 1">
+      <created>1567942132983</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1567942132983</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -762,9 +783,9 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.18063112" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4978678" weight="0.32887402" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053304" side_tool="true" weight="0.17948718" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49946696" weight="0.32998884" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4978678" weight="0.32733223" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5015129" side_tool="true" visible="true" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.49848714" visible="true" weight="0.3289689" />
       <window_info active="true" anchor="bottom" id="Messages" order="10" sideWeight="0.49946696" visible="true" weight="0.17948718" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -866,9 +887,12 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="gitignore" />
     <MESSAGE value="1318" />
-    <option name="LAST_COMMIT_MESSAGE" value="1318" />
+    <MESSAGE value="new clone" />
+    <MESSAGE value="new clone 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="new clone 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1456,7 +1480,7 @@
     <entry file="file://$PROJECT_DIR$/2.JavaCore/src/com/javarush/task/task14/task1404/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
