@@ -1,9 +1,7 @@
 package com.javarush.task.task14.task1404;
 
 /* 
-Task is solved
-JavaRush subscribe for month
-new clone ropository
+Changed from GitHub
 */
 
 import java.io.BufferedReader;
