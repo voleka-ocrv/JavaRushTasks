@@ -1,7 +1,7 @@
 package com.javarush.task.task14.task1404;
 
 /* 
-Koty
+Koty new project name
 */
 
 import java.io.BufferedReader;
