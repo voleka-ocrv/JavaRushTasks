@@ -4,7 +4,6 @@ package com.javarush.task.task14.task1410;
 Дегустация вин
 */
 
-import com.javarush.task.task13.task1317.Weather;
 
 public class Solution {
     public static void main(String[] args) {
