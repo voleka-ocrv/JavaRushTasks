@@ -5,5 +5,5 @@
 
 [Про Git](https://git-scm.com/book/ru/v1)
 
-01/09/2019
-https://javarush.ru/quests/lectures/questsyntax.level09.lecture04
+12/09/2019
+https://javarush.ru/quests/lectures/questcore.level05.lecture05
