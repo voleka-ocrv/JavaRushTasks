@@ -1,10 +1,10 @@
 package com.javarush.task.task14.task1419;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.nio.charset.UnsupportedCharsetException;
+import java.nio.file.FileSystemNotFoundException;
 import java.util.ArrayList;
+import java.util.IllegalFormatException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -47,30 +47,12 @@ public class Solution {
         } catch (Exception e) {
             exceptions.add(e);
         }
-
-        // 4. IllegalArgumentException
-        try {
-            String string = "004034556";
-            String[] parts = string.split("?");
-            String part1 = parts[0]; // 004
-            String part2 = parts[1]; // 034556
-        } catch (Exception e) {
-            exceptions.add(e);
-        }
-
-        //5. IOException
-        try {
-//            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-//            String name = bufferedReader.readLine(); //читаем строку с клавиатуры
-
-//            BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
-//            String userInput;
-//            while ((userInput = stdIn.readLine()) != null) {
-//                System.out.println(userInput);
-//            }
-            File f = new File(System.getProperty("user.home") + "/.foo/bar/", "1");
-        } catch (IOException e) {
-            exceptions.add(e);
-        }
+        exceptions.add(new IOException());
+        exceptions.add(new FileNotFoundException());
+        exceptions.add(new RuntimeException());
+        exceptions.add(new IndexOutOfBoundsException());
+        exceptions.add(new IllegalArgumentException());
+        exceptions.add(new FileSystemNotFoundException());
+        exceptions.add(new NullPointerException());
     }
 }
