@@ -5,46 +5,39 @@ package com.javarush.task.task15.task1524;
 */
 
 public class Solution {
-    public static int i;
-    public static String name;
-//    public int i = 6;
-//    public String name = "First name";
 //    static {
 //        System.out.println("Static block");
-//        System.out.println("public static void main");
 //    }
+
     {
+        System.out.println("Non-static block");
         printAllFields(this);
-        i = 6;
-        name = "First name";
     }
-//    {
-//        System.out.println("Non-static block"); // 4/
-//        printAllFields(this); // 4 -> 5
-//    }
+
+    public int i = 6;
+    public String name = "First name";
+
     static {
         init();
-        System.out.println("public static void main"); // 3.
-        System.out.println("Non-static block"); // 4/
-        printAllFields(this);
     }
+
     public Solution() {
         System.out.println("Solution constructor");
         printAllFields(this);
     }
 
     public static void init() {
-        System.out.println("static void init()"); // 1.
-        System.out.println("Static block"); // 2.
+        System.out.println("static void init()");
+        System.out.println("Static block");
     }
 
     public static void main(String[] args) {
-//        System.out.println("public static void main");
+        System.out.println("public static void main");
         Solution s = new Solution();
     }
 
     public static void printAllFields(Solution obj) {
-        System.out.println("static void printAllFields"); //
+        System.out.println("static void printAllFields");
         System.out.println(obj.i);
         System.out.println(obj.name);
     }
