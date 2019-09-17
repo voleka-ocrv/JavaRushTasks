@@ -19,11 +19,9 @@ public class Solution {
 
             String line;
             while((line = bufferedReader.readLine()) != null) {
-//                System.out.println(line); // выводим содержимое файла на экран построчно
                 lines.add(line);
             }
-
-            bufferedReader.close(); // закрываем поток
+             bufferedReader.close(); // закрываем поток
         } catch (Exception e) {
             e.printStackTrace();
         }
