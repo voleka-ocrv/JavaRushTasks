@@ -19,12 +19,13 @@ public class Solution {
         int finishedCount = 0;
         //напишите тут ваш код
         for (int i = 0; i < horses.size(); i++) {
-            if ((horses.get(i).isFinished)) {
+            if ((horses.get(i).isFinished())) {
                 finishedCount++;
             }
             else {
                 System.out.println("Waiting for " + horses.get(i).getName());
                 horses.get(i).join();
+//                finishedCount++;
             }
         }
         return finishedCount;
