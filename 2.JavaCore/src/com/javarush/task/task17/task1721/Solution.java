@@ -2,6 +2,7 @@ package com.javarush.task.task17.task1721;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -21,28 +22,41 @@ public class Solution {
             fileNameAllLines = readFileName(reader);
             fileNameForRemoveLines = readFileName(reader);
             reader.close();
+
+//        fileNameAllLines = "D:\\JavaRushProject\\JavaRushTasks\\2.JavaCore\\src\\com\\javarush\\task\\task17\\task1721\\allLines.txt";
+//        fileNameForRemoveLines = "D:\\JavaRushProject\\JavaRushTasks\\2.JavaCore\\src\\com\\javarush\\task\\task17\\task1721\\forRemoveLines.txt";
+            try {
+                allLines = readFileContent(fileNameAllLines);
+                forRemoveLines = readFileContent(fileNameForRemoveLines);
+//            System.out.println(allLines);
+//            System.out.println(forRemoveLines);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            try {
+                Solution solution = new Solution();
+                solution.joinData();
+//                joinData();
+            } catch (CorruptedDataException e) {
+                e.printStackTrace();
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
-        }
-
-        fileNameAllLines = "D:\\JavaRushProject\\JavaRushTasks\\2.JavaCore\\src\\com\\javarush\\task\\task17\\task1721\\allLines.txt";
-        fileNameForRemoveLines = "D:\\JavaRushProject\\JavaRushTasks\\2.JavaCore\\src\\com\\javarush\\task\\task17\\task1721\\forRemoveLines.txt";
-        try {
-            allLines = readFileContent(fileNameAllLines);
-            forRemoveLines = readFileContent(fileNameForRemoveLines);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        if (compareLists(forRemoveLines, allLines)) {
-            removeLines(forRemoveLines, allLines);
-        }
-        else {
-            allLines.clear();
         }
     }
 
     public void joinData() throws CorruptedDataException {
 //        main();
+        if (!forRemoveLines.retainAll(allLines)) {
+            allLines.removeAll(forRemoveLines);
+        } else {
+            allLines.clear();
+            throw new CorruptedDataException();
+        }
+//        System.out.println(allLines);
+//        System.out.println(forRemoveLines);
     }
 
     public static String readFileName(BufferedReader reader) throws IOException {
@@ -73,20 +87,19 @@ public class Solution {
                     break;
                 } else isIncluded = false;
             }
-            if (!isIncluded) {break;
+            if (!isIncluded) {
+                break;
             }
         }
         return isIncluded;
     }
 
     public static void removeLines(List<String> includedLines, List<String> containedLines) {
-        boolean isIncluded = true;
-        for (String includedLine : includedLines) {
-            for (String containedLine : containedLines) {
-                if (includedLine.compareTo(containedLine) == 0) {
-                    containedLines.remove(includedLine);
-                }
-            }
+        Iterator itr = allLines.iterator();
+        while (itr.hasNext()) {
+            int x = (Integer) itr.next();
+            if (x < 10)
+                itr.remove();
         }
     }
 }
