@@ -18,35 +18,30 @@ public class Person {
         this.birthDate = birthDate;
     }
 
+    private Person(String name, String sex, String birthDay) {
+        this.name = name;
+
+        //обработать дату
+        Date birthDate;
+        try {
+            SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
+            this.birthDate = formatter.parse(birthDay);
+        } catch (ParseException e) {
+            throw new IllegalArgumentException("Дата должна указываться в формате 'dd/MM/yyyy'. Запись не создана.");
+        }
+
+        this.sex = derermineSex(sex);
+    }
+
+
     public static void createPerson(List<Person> allPeople, String[] args) throws ParseException {
         int parameterQuantity = 3;
 
         if (args.length < parameterQuantity++) {
             System.out.println("Формат команды: -c name sex bd\n");
         } else {
-            String nameArg = args[1];
-            String sexArg = args[2];
-            SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
-            Date birthDateArg = formatter.parse(args[3]);
-            Person person = null;
-            switch (sexArg) {
-                case "м": {
-                    person = createMale(nameArg, birthDateArg);
-                    break;
-                }
-                case "ж": {
-                    person = createFemale(nameArg, birthDateArg);
-                    break;
-                }
-                default: {
-                    System.out.println("Параметр 'Пол' может принимать значение 'м' или 'ж'. Запись не создана.");
-                    break;
-                }
-            }
-            if (!person.equals(null)) {
-                allPeople.add(person);
-                System.out.println(allPeople.size()-1);
-            }
+            allPeople.add(new Person(args[1], args[2], args[3]));
+            System.out.println(allPeople.size() - 1);
         }
     }
 
@@ -56,34 +51,12 @@ public class Person {
         if (args.length < parameterQuantity++) {
             System.out.println("-u id name sex bd\n");
         } else {
-            Integer idArg = Integer.parseInt(args[1]);
-            String nameArg = args[2];
-            String sexArg = args[3];
-            SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
-            Date birthDateArg = formatter.parse(args[4]);
-            Sex sex = Sex.MALE;
-            switch (sexArg) {
-                case "м": {
-                    sex = Sex.MALE;
-                    break;
-                }
-                case "ж": {
-                    sex = Sex.FEMALE;
-                    break;
-                }
-                default: {
-                    System.out.println("Параметр 'Пол' может принимать значение 'м' или 'ж'.");
-                    break;
-                }
-            }
-
-            Person person = allPeople.get(idArg);
+            Person person = allPeople.get(Integer.parseInt(args[1]));
             {
-                person.setName(nameArg);
-                person.setSex(sex);
-                person.setBirthDate(birthDateArg);
+                person.setName(args[2]);
+                person.setSex(derermineSex(args[3]));
+                person.setBirthDate(new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(args[4]));
             }
-            System.out.println(idArg);
         }
     }
 
@@ -166,9 +139,17 @@ public class Person {
         this.birthDate = birthDate;
     }
 
-    public void birthDateToStrig() {
-//        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM", Locale.ENGLISH);
-//        System.out.println("Constructor 4: " + dateFormat.format(birthDate) );
-        System.out.println(new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH).format(birthDate));
+    public static Sex derermineSex(String sex) {
+        switch (sex) {
+            case "м": {
+                return Sex.MALE;
+            }
+            case "ж": {
+                return Sex.FEMALE;
+            }
+            default: {
+                throw new IllegalArgumentException("Параметр 'Пол' может принимать значение 'м' или 'ж'. Запись не создана.");
+            }
+        }
     }
 }

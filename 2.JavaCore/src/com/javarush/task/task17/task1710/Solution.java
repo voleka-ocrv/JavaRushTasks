@@ -18,12 +18,12 @@ public class Solution {
     static {
         allPeople.add(Person.createMale("Иванов Иван", new Date()));  //сегодня родился    id=0
         allPeople.add(Person.createMale("Петров Петр", new Date()));  //сегодня родился    id=1
+
     }
 
     public static void main(String[] args) throws ParseException {
-        //start here - начни тут
-
         if (args.length != 0) {
+            //проверка достаточности аргументов
             switch (args[0]){
                 case "-c":{
                     Person.createPerson(allPeople, args);
@@ -48,8 +48,8 @@ public class Solution {
             };
 
         }
-//        else {
-//            System.out.println("Programm was started without parameters");
-//        }
+        else {
+            System.out.println("Program was started without parameter");
+        }
     }
 }
